@@ -1,0 +1,103 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "4.2.*",
+		"torann/currency": "dev-master",
+		"mobishift/laravel-cashive": "dev-master"
+	},
+	"require-dev": {
+		"way/guard-laravel": "dev-master",
+		"components/jquery": "1.9.*",
+		"components/jqueryui": "1.10.*",
+		"components/bootstrap": "3.*",
+		"afarkas/html5shiv": "3.6.*",
+		"moment/moment": "2.7.*"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist",
+		"component-dir": "public/components"
+	},
+	"minimum-stability": "dev",
+	"repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "afarkas/html5shiv",
+                "type": "component",
+                "version": "3.6.2",
+                "dist": {
+                    "url": "https://github.com/aFarkas/html5shiv/archive/3.6.2.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/aFarkas/html5shiv.git",
+                    "type": "git",
+                    "reference": "3.6.2"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": [
+                            "dist/html5shiv.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "moment/moment",
+                "type": "component",
+                "version": "2.7.0",
+                "dist": {
+                    "url": "https://github.com/moment/moment/archive/2.7.0.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/moment/moment.git",
+                    "type": "git",
+                    "reference": "2.7.0"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": [
+                            "min/moment-with-langs.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        }
+    ]
+}

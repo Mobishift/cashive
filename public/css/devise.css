@@ -1,0 +1,23 @@
+#devise-mini {
+  padding: 50px 0; }
+  #devise-mini .well {
+    width: 400px;
+    margin: 0 auto;
+    padding: 35px; }
+    #devise-mini .well form {
+      margin-bottom: 0px; }
+      #devise-mini .well form input[type="checkbox"] {
+        vertical-align: top; }
+        #devise-mini .well form input[type="checkbox"] + label {
+          display: inline-block; }
+      #devise-mini .well form button {
+        display: inline-block;
+        margin: 10px 0px; }
+
+#error_explanation h2 {
+  margin-bottom: 0px;
+  color: red;
+  font-size: 14px;
+  line-height: 16px; }
+#error_explanation ul {
+  list-style: disc; }

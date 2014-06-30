@@ -1,0 +1,21 @@
+#navbar .navbar {
+  min-height: 30px; }
+#navbar .navbar .nav > li > a {
+  padding: 5px 15px;
+  display: inline-block; }
+#navbar .navbar .nav > li > a:hover .caret {
+  border-top-color: white;
+  border-bottom-color: white; }
+#navbar .navbar img {
+  display: inline-block;
+  vertical-align: bottom; }
+#navbar .status {
+  color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+  margin-right: 8px;
+  padding: 0px 10px; }
+#navbar .status.red {
+  background-color: red; }
+#navbar .status.green {
+  background-color: green; }

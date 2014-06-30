@@ -1,0 +1,162 @@
+#admin {
+  margin-top: 50px; }
+  #admin h3 {
+    margin-top: 0px; }
+  #admin label.error {
+    color: #b94a48;
+    margin-bottom: 15px;
+    font-size: 16px; }
+  #admin input.error {
+    border-color: #b94a48;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  #admin #admin_homepage fieldset, #admin #admin_site_settings fieldset, #admin #admin_customize fieldset, #admin #admin_campaigns fieldset {
+    margin-bottom: 30px; }
+  #admin #admin_homepage legend, #admin #admin_site_settings legend, #admin #admin_customize legend, #admin #admin_campaigns legend {
+    font-size: 26px; }
+  #admin #admin_homepage .field, #admin #admin_site_settings .field, #admin #admin_customize .field, #admin #admin_campaigns .field {
+    background: rgba(128, 128, 128, 0.17);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px; }
+    #admin #admin_homepage .field .explanation, #admin #admin_site_settings .field .explanation, #admin #admin_customize .field .explanation, #admin #admin_campaigns .field .explanation {
+      float: right;
+      width: 400px; }
+    #admin #admin_homepage .field .explanation.inline, #admin #admin_site_settings .field .explanation.inline, #admin #admin_customize .field .explanation.inline, #admin #admin_campaigns .field .explanation.inline {
+      float: none;
+      width: 100%; }
+    #admin #admin_homepage .field .explanation.message, #admin #admin_site_settings .field .explanation.message, #admin #admin_customize .field .explanation.message, #admin #admin_campaigns .field .explanation.message {
+      float: left;
+      width: 900px; }
+    #admin #admin_homepage .field label, #admin #admin_site_settings .field label, #admin #admin_customize .field label, #admin #admin_campaigns .field label {
+      margin-bottom: 15px;
+      font-size: 18px; }
+    #admin #admin_homepage .field label.inline, #admin #admin_site_settings .field label.inline, #admin #admin_customize .field label.inline, #admin #admin_campaigns .field label.inline {
+      display: inline-block; }
+  #admin #admin_homepage .additional_info_input, #admin #admin_site_settings .additional_info_input, #admin #admin_customize .additional_info_input, #admin #admin_campaigns .additional_info_input {
+    margin-top: 20px; }
+    #admin #admin_homepage .additional_info_input textarea, #admin #admin_site_settings .additional_info_input textarea, #admin #admin_customize .additional_info_input textarea, #admin #admin_campaigns .additional_info_input textarea {
+      width: 360px; }
+  #admin #admin_homepage #preset-amount, #admin #admin_homepage #min-amount, #admin #admin_site_settings #preset-amount, #admin #admin_site_settings #min-amount, #admin #admin_customize #preset-amount, #admin #admin_customize #min-amount, #admin #admin_campaigns #preset-amount, #admin #admin_campaigns #min-amount {
+    margin-left: 20px; }
+  #admin #admin_homepage .currency, #admin #admin_site_settings .currency, #admin #admin_customize .currency, #admin #admin_campaigns .currency {
+    position: relative; }
+    #admin #admin_homepage .currency input, #admin #admin_site_settings .currency input, #admin #admin_customize .currency input, #admin #admin_campaigns .currency input {
+      padding-left: 24px;
+      width: 192px; }
+    #admin #admin_homepage .currency span, #admin #admin_site_settings .currency span, #admin #admin_customize .currency span, #admin #admin_campaigns .currency span {
+      position: absolute;
+      top: 5px;
+      left: 10px; }
+  #admin #admin_homepage #rewards .reference, #admin #admin_site_settings #rewards .reference, #admin #admin_customize #rewards .reference, #admin #admin_campaigns #rewards .reference {
+    margin: 20px 0px; }
+  #admin #admin_homepage #rewards ul, #admin #admin_site_settings #rewards ul, #admin #admin_customize #rewards ul, #admin #admin_campaigns #rewards ul {
+    margin: 0px; }
+    #admin #admin_homepage #rewards ul li, #admin #admin_site_settings #rewards ul li, #admin #admin_customize #rewards ul li, #admin #admin_campaigns #rewards ul li {
+      background-color: rgba(128, 128, 128, 0.35);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 12px;
+      margin-bottom: 20px; }
+      #admin #admin_homepage #rewards ul li label, #admin #admin_site_settings #rewards ul li label, #admin #admin_customize #rewards ul li label, #admin #admin_campaigns #rewards ul li label {
+        color: black;
+        font-size: 14px;
+        margin-bottom: 0px; }
+        #admin #admin_homepage #rewards ul li label.error, #admin #admin_site_settings #rewards ul li label.error, #admin #admin_customize #rewards ul li label.error, #admin #admin_campaigns #rewards ul li label.error {
+          color: #b94a48;
+          margin-bottom: 10px;
+          font-size: 14px; }
+      #admin #admin_homepage #rewards ul li table, #admin #admin_site_settings #rewards ul li table, #admin #admin_customize #rewards ul li table, #admin #admin_campaigns #rewards ul li table {
+        margin-bottom: 0px; }
+  #admin #admin_homepage .faq.sortable, #admin #admin_site_settings .faq.sortable, #admin #admin_customize .faq.sortable, #admin #admin_campaigns .faq.sortable {
+    margin-left: 0px; }
+    #admin #admin_homepage .faq.sortable li, #admin #admin_site_settings .faq.sortable li, #admin #admin_customize .faq.sortable li, #admin #admin_campaigns .faq.sortable li {
+      background-color: rgba(128, 128, 128, 0.35);
+      padding: 12px;
+      margin-bottom: 8px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      vertical-align: middle;
+      cursor: move; }
+      #admin #admin_homepage .faq.sortable li textarea, #admin #admin_site_settings .faq.sortable li textarea, #admin #admin_customize .faq.sortable li textarea, #admin #admin_campaigns .faq.sortable li textarea {
+        width: 400px;
+        max-width: 400px;
+        margin-bottom: 0px; }
+      #admin #admin_homepage .faq.sortable li .faq-delete, #admin #admin_site_settings .faq.sortable li .faq-delete, #admin #admin_customize .faq.sortable li .faq-delete, #admin #admin_campaigns .faq.sortable li .faq-delete {
+        opacity: 0.5; }
+        #admin #admin_homepage .faq.sortable li .faq-delete:hover, #admin #admin_site_settings .faq.sortable li .faq-delete:hover, #admin #admin_customize .faq.sortable li .faq-delete:hover, #admin #admin_campaigns .faq.sortable li .faq-delete:hover {
+          opacity: 1; }
+  #admin #admin_homepage .include_comments_input, #admin #admin_site_settings .include_comments_input, #admin #admin_customize .include_comments_input, #admin #admin_campaigns .include_comments_input {
+    margin-top: 20px; }
+  #admin #admin_payments .search form {
+    float: left;
+    margin-right: 10px; }
+    #admin #admin_payments .search form input {
+      width: 270px;
+      margin: 0 2px 0px 0px; }
+  #admin .nav-processor-setup .active > a, #admin .nav-bank-setup .active > a {
+    background-color: whitesmoke; }
+  #admin #admin_bank_setup .main_content {
+    width: 900px;
+    float: left; }
+  #admin #admin_bank_setup fieldset {
+    margin-bottom: 30px; }
+  #admin #admin_bank_setup .account_numbers {
+    border-bottom: 1px solid gray; }
+  #admin #admin_bank_setup .more_info {
+    padding-top: 10px; }
+  #admin #admin_bank_setup .form-row .field {
+    float: left;
+    margin-right: 20px; }
+
+#admin-footer {
+  background: #e6e6e6;
+  -moz-box-shadow: inset 0px 1px 3px 0px #acacac;
+  -webkit-box-shadow: inset 0px 1px 3px 0px #acacac;
+  box-shadow: inset 0px 1px 3px 0px #acacac;
+  padding: 40px 0 30px; }
+  #admin-footer ul {
+    float: left; }
+  #admin-footer li {
+    margin-bottom: 10px; }
+  #admin-footer a {
+    font-size: 14px;
+    color: #6b6b6b; }
+    #admin-footer a:hover {
+      text-decoration: none;
+      color: #323232; }
+  #admin-footer p {
+    font-size: 14px; }
+
+.inline-alert {
+  text-shadow: none;
+  font-size: 12px;
+  text-align: left;
+  float: right;
+  clear: both;
+  width: 385px;
+  border: 1px solid #b94a48;
+  overflow: auto; }
+
+.box-alert {
+  text-shadow: none;
+  text-align: left;
+  clear: both;
+  border: 1px solid #b94a48;
+  overflow: auto;
+  margin-bottom: 10px; }
+
+.text-area-border {
+  border: 1px solid red; }
+
+legend.foldable:hover {
+  cursor: pointer; }
+
+div .foldable {
+  display: block; }
+
+.reward_table {
+  display: none; }
