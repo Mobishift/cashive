@@ -29,7 +29,7 @@ Route::get('users/sign_out', array('as' => 'sign_out_path', 'uses' => 'UserContr
 Route::get('users/create', array('as' => 'sign_up_path', 'uses' => 'UserController@create'));
 Route::resource('users', 'UserController');
 
-Route::group(array('prefix' => 'admin', 'before' => array('auth', 'admin', 'check_init')), function() {
+Route::group(array('prefix' => 'admin', 'before' => array('auth', 'check_init', 'admin')), function() {
 	Route::get('/', function() {
 		return Redirect::action('Admin\\CampaignController@index');
 	});

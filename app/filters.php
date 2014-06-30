@@ -118,6 +118,7 @@ Route::filter('check_init', function()
 			}
 			else
 			{
+			    Log::error("check_init failed, HTTP_CODE: {$response->http_code}, ERROR_RESPONSE: ".var_export($response->response, TRUE));
 				$settings->initialized_flag = false;
 				$settings->save();
 				Auth::logout();

@@ -92,6 +92,7 @@ class CampaignController extends \BaseController
         if($id == 0){
             $create = TRUE;
             $campaign = new Campaign;
+            $campaign->save();
         }else{
             $create = FALSE;
             $campaign = Campaign::find($id);
@@ -255,6 +256,9 @@ class CampaignController extends \BaseController
         else
         {
             if($create){
+                $campaign->rewards()->delete();
+                $campaign->faqs()->delete();
+                $campaign->delete();
                 return Redirect::action('Admin\CampaignController@create')
                     ->withErrors($resp->get_errmsg());
             }else{
