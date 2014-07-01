@@ -1,5 +1,5 @@
 <?php namespace Admin;
-use \View, \Input, \Log, \Redirect, \Carbon\Carbon, \Response ;
+use \View, \Input, \Log, \Redirect, \Carbon\Carbon, \Response, \Request;
 use \Campaign, \Reward, \Setting, \Cashive, \Payment, \User, \Faq;
 
 function simple_array_to_string($array_){
@@ -355,7 +355,17 @@ class CampaignController extends \BaseController
 
     public function getHomepage()
     {
-        
+        $settings = Setting::find(1);
+        if (Request::isMethod('post'))
+        {
+            $homepage_content = Input::get('homepage_content');
+            if($homepage_content){
+                $settings->homepage_content = $homepage_content;
+                $settings->save();
+            }
+        }
+        $this->layout->content = View::make('admin.homepage')
+            ->with('active', 'homepage')->with('settings', $settings);
     }
 
     public function getCustomize()

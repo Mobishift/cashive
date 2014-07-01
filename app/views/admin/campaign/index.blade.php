@@ -13,10 +13,10 @@
           <th>Goal</th>
           <th>Raised</th>
           <th>Expiration<br/>Date</th>
-<!--
+{{--
           <th>Published?</th>
           <th>Payments<br/>Activated?</th>
--->
+--}}
           <th></th>
           <th></th>
           <th></th>
@@ -43,10 +43,10 @@
           </td>
 
           <td>{{{ with( new DateTime($campaign->expiration_date) )->format("m/d/Y") }}}</td>
-<!--
+{{--
           <td>{{ $campaign->published_flag ? '<span class="glyphicon glyphicon-ok"></span>' : '' }}</td>
           <td>{{ $campaign->production_flag ? '<span class="glyphicon glyphicon-ok"></span>' : '' }}</td>
--->
+--}}
           <td>{{ link_to_action( 'Admin\\CampaignController@edit', 'Edit', array($campaign->id)) }}</td>
           <td>{{ link_to_action( 'CampaignController@show', 'View', array($campaign->id)) }}</td>
           <td>{{ link_to_route( 'admin_campaigns_payments_path', 'Payments', array($campaign->id)) }}</td>

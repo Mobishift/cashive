@@ -4,10 +4,10 @@
   <li class="{{{ $active === 'campaign' ? 'active' : '' }}}">
     {{ link_to_action('Admin\\CampaignController@index', "Campaigns") }}
   </li>
-<!--
   <li class="{{{ $active === 'homepage' ? 'active' : '' }}}">
     {{ link_to_route('admin_homepage_path', "Homepage") }}
   </li>
+{{--
   <li class="{{{ $active === 'customize' ? 'active' : '' }}}">
     {{ link_to_route('admin_customize_path', "Customize") }}
   </li>
@@ -22,5 +22,5 @@
       <li>{{ link_to_route('admin_notification_path', "Notification Settings") }}</li>
     </ul>
   </li>
--->
+--}}
 </ul>

@@ -34,7 +34,7 @@ Route::group(array('prefix' => 'admin', 'before' => array('auth', 'check_init', 
 		return Redirect::action('Admin\\CampaignController@index');
 	});
 	 
-	Route::get('homepage', array('as' => 'admin_homepage_path', 'uses' => "Admin\\CampaignController@getHomepage"));
+	Route::match(array('GET', 'POST'), 'homepage', array('as' => 'admin_homepage_path', 'uses' => "Admin\\CampaignController@getHomepage"));	
 	Route::get('customize', array('as' => 'admin_customize_path', 'uses' => "Admin\\CampaignController@getCustomize"));
 	Route::get('site_settings', array('as' => 'admin_site_path', 'uses' => "Admin\\CampaignController@getSiteSettings"));
 	Route::get('payment_settings', array('as' => 'admin_payment_path', 'uses' => "Admin\\CampaignController@getPaymentSettings"));
