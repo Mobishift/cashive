@@ -31,7 +31,8 @@ class UserTableSeeder extends Seeder
 		User::create( array(
 			'name' => 'John Please',
 			'email'		=> 'john@mobishift.com',
-			'password'	=> Hash::make('abc123')
+			'password'	=> Hash::make('abc123'),
+			'uid' => '',
 		));
 	}
 }
