@@ -1,5 +1,5 @@
 <?php namespace Admin;
-use \View, \Input, \Log, \Redirect, \Carbon\Carbon, \Response, \Request;
+use \View, \Input, \Log, \Redirect, \Carbon\Carbon, \Response, \Request, \Validator;
 use \Campaign, \Reward, \Setting, \Cashive, \Payment, \User, \Faq;
 
 function simple_array_to_string($array_){
@@ -92,6 +92,12 @@ class CampaignController extends \BaseController
         if($id == 0){
             $create = TRUE;
             $campaign = new Campaign;
+            $campaign->name = "TEMP";
+            $campaign->expiration_date = "2014-01-01 00:00:00";
+            $campaign->ch_campaign_id = "0";
+            $campaign->min_payment_amount = 0;
+            $campaign->fixed_payment_amount = 0;
+            $campaign->goal_dollars = 0;
             $campaign->save();
         }else{
             $create = FALSE;
@@ -148,6 +154,33 @@ class CampaignController extends \BaseController
             }
             else
             {
+                if(isset($reward_data['id']) or $reward_data['title'] != ''){
+                    $rules = array(
+                        'delivery_date' => 'required|date',
+                    );
+                    Log::debug($rewards_data);
+                    $validator = Validator::make(array(
+                        'delivery_date' => $reward_data['delivery_date'],
+                    ), $rules);
+            
+                    if ( $validator->fails() )
+                    {
+                        if($create){
+                            $campaign->rewards()->delete();
+                            $campaign->faqs()->delete();
+                            $campaign->delete();
+                            return Redirect::action('Admin\CampaignController@create', $id)
+                                ->withInput()
+                                ->withErrors($validator->errors());
+                        }else{
+                            return Redirect::action('Admin\CampaignController@edit', $id)
+                                ->withInput()
+                                ->withErrors($validator->errors());
+                        }
+    
+                    }
+                }
+
                 if ( isset($reward_data['id']) )
                 {
                     $reward = Reward::find($reward_data['id']);
@@ -155,7 +188,7 @@ class CampaignController extends \BaseController
                     $reward->image_url = $reward_data['image_url'];
                     $reward->description = $reward_data['description'];
                     $reward->delivery_date = $reward_data['delivery_date'];
-                    $reward->number = $reward_data['number'];
+                    $reward->number = $reward_data['number'] or 0;
                     $reward->price = $reward_data['price'];
                     $reward->collect_shipping_flag = isset($reward_data['collect_shipping_flag']) ? $reward_data['collect_shipping_flag'] : '0';
                     $reward->include_claimed = isset($reward_data['include_claimed']) ? $reward_data['include_claimed'] : '0';
@@ -175,7 +208,7 @@ class CampaignController extends \BaseController
                             'image_url'                => $reward_data['image_url'],
                             'description'            => $reward_data['description'],
                             'delivery_date'            => $reward_data['delivery_date'],
-                            'number'                => $reward_data['number'],
+                            'number'                => $reward_data['number'] or 0,
                             'price'                    => $reward_data['price'],
                             'collect_shipping_flag'    => isset($reward_data['collect_shipping_flag']) ? $reward_data['collect_shipping_flag'] : '0',
                             'include_claimed'        => isset($reward_data['include_claimed']) ? $reward_data['include_claimed'] : '0'

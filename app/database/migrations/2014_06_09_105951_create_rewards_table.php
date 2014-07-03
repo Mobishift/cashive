@@ -16,11 +16,11 @@ class CreateRewardsTable extends Migration {
 	    {
 	        $table->increments('id');
 	        $table->string('campaign_id');
-	        $table->string('title');
+	        $table->string('title')->default("");
 	        $table->string('description')->nullable();
-	        $table->date('delivery_date');
+	        $table->date('delivery_date')->default("1970-01-01");
 	        $table->integer('number')->default(0);
-	        $table->integer('price');
+	        $table->integer('price')->default(0);
 	        $table->string('image_url')->nullable();
 	        $table->boolean('visible_flag')->default(false);
 	        $table->boolean('collect_shipping_flag')->default(false);
